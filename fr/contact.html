@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="../images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Me Contacter</title>
@@ -55,8 +55,11 @@
                 </div>
             </div>
             <div class="row">
-                <textarea name="message" class="form-control mr-4 ml-4 mb-4" id="message" rows="3"
+                <textarea name="message" class="form-control mr-4 ml-4" id="message" rows="3"
                     placeholder="Votre Message ..." required></textarea>
+            </div>
+            <div class="row m-4">
+                <div data-netlify-recaptcha="true" class="m-auto"></div>
             </div>
             <div class="row">
                 <button class="btn btn-outline-light m-auto" type="submit">Envoyer votre message</button>
