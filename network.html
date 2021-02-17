@@ -127,7 +127,7 @@
         </div>
         <div class="row mb-3 transition4" style="opacity: 1; transform: translate(0px);">
             <div class="col-md mb-3 py-2">
-                <div class="card text-light" style="background-color: rgb(0, 20, 20);">
+                <div class="card h-100 text-light" style="background-color: rgb(0, 20, 20);">
                     <div class="card-header" style="background-color:black;">
                         <h2>Tilaukset</h2>
                     </div>
@@ -142,17 +142,18 @@
                 </div>
             </div>
             <div class="col-md mb-3 py-2">
-                <div class="card text-light" style="background-color: rgb(0, 20, 20);">
+                <div class="card h-100 text-light" style="background-color: rgb(20, 5, 20);">
                     <div class="card-header" style="background-color:black;">
-                        <h2>Tilaukset</h2>
+                        <h2>Apotek</h2>
                     </div>
                     <div class="card-body">
-                        <img src="images/pizza_120px.png">
-                        <h6>Web App</h6>
-                        <p class="card-text mt-2">An Online food Ordering app where the restaurant owner can put his
-                            menu and people can order food with it</p>
-                        <a class="btn btn-outline-warning" href="https://tilaukset.000webhostapp.com/"
-                            target="_blank">See live preview of the app</a>
+                        <img src="images/shopping_basket_120px.png">
+                        <h6>Desktop App</h6>
+                        <p class="card-text mt-2">An inventory management application, track products bought and sold,
+                            their expiration date, reports.... <br> This app could be used by shops, pharmacies....
+                        </p>
+                        <button class="btn btn-outline-primary" data-toggle="modal" data-target=".StockModal">Check out
+                            Screen shots</button>
                     </div>
                 </div>
             </div>
@@ -263,6 +264,51 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#carouselVerhuren" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade StockModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Screen shots Inventory management system</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div id="carouselStock" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active text-center bg-dark">
+                                <img src="images/Stock/login.PNG" class="w-100">
+                            </div>
+                            <div class="carousel-item text-center bg-dark">
+                                <img src="images/Stock/Page principale.PNG" class="w-100">
+                            </div>
+                            <div class="carousel-item text-center bg-dark">
+                                <img src="images/Stock/parametre.PNG" class="w-100">
+                            </div>
+                            <div class="carousel-item text-center bg-dark">
+                                <img src="images/Stock/catgories.jfif" class="w-100">
+                            </div>
+                            <div class="carousel-item text-center bg-dark">
+                                <img src="images/Stock/products.jfif" class="w-100">
+                            </div>
+                            <div class="carousel-item text-center bg-dark">
+                                <img src="images/Stock/utilisateurs.jfif" class="w-100">
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselStock" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselStock" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
