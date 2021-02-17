@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body{
+    font-family: 'Nunito' !important;
+}
+
+h6, h5{
+    font-weight: bold !important;
+}
+
+a, button {
+    letter-spacing: .1rem;
+    text-transform: uppercase !important;
+}
+
+
 .active {
     border-bottom: 2px rgb(50, 0, 0) solid;
 }
+
 header img{
     width: 80px;
 }

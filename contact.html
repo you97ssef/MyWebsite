@@ -23,7 +23,8 @@
 <body style="background-color: rgb(20, 0, 0);">
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-light" style="background-color: none !important;">
-            <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="" srcset=""></a>
+            <a class="navbar-brand" href="index.html"><img class="hero-design square-anim"
+                    style="transform: translate(0px); opacity: 1;" src="./images/logo.png" alt="" srcset=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,9 +44,9 @@
         </nav>
     </header>
 
-    <main class="container text-center">
-
-        <form method="POST" class="mb-5" netlify data-netlify-recaptcha="true">
+    <main class="container text-center" style="margin-top: 70px;">
+        <form method="POST" class="mb-5 transition2" style="transform: translate(0px); opacity: 1;" netlify
+            data-netlify-recaptcha="true">
             <h1 class="text-light m-5">SEND ME A MESSAGE</h1>
             <div class="row">
                 <div class="col-sm ml-2 mr-2 mb-4">
@@ -69,7 +70,7 @@
 
         <hr style="border: 1px solid white;">
 
-        <div class="row">
+        <div class="row transition3" style="transform: translate(0px); opacity: 1;">
             <div class="col-md-4" style="padding:20px;">
                 <div class="card">
                     <div class="card-body text-light" style="background-color: rgb(50, 50, 50);">
@@ -102,12 +103,12 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row transition4" style="transform: translate(0px); opacity: 1;">
             <div class="col-md-4" style="padding:20px;">
                 <div class="card">
                     <div class="card-body text-light" style="background-color: rgb(0, 50, 0);">
                         <img src="images/Contact/whatsapp_150px.png" class="card-title">
-                        <p class="card-text">My WhatsApp Number : +212 664094698</p>
+                        <p class="card-text">WhatsApp: +212 664094698</p>
                         <a class="btn btn-outline-success" type="button"
                             href="https://api.whatsapp.com/send?phone=212664094698" target="_blank">Message Me</a>
                     </div>
@@ -136,9 +137,77 @@
         </div>
     </main>
 
-    <div class="text-center mb-4 p-0">
+    <div class="text-center mb-4 p-0 transition4" style="transform: translate(0px); opacity: 1;">
         <a class="btn btn-light m-1 btn-sm">English</a>
         <a class="btn btn-outline-light m-1 btn-sm" href="./fr/contact.html">Français</a>
     </div>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous">
+        </script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        var tl = gsap.timeline();
+
+        tl.from('.content', {
+            y: '-30%',
+            opacity: 0,
+            duration: 2,
+            ease: Power4.easeOut
+        })
+        tl.from('.stagger1', {
+            opacity: 0,
+            y: -50,
+            stagger: .3,
+            ease: Power4.easeOut,
+            duration: 2
+        }, "-=1.5")
+        tl.from('.hero-design', {
+            opacity: 0, y: 50, ease: Power4.easeOut, duration: 1
+        }, "-=2")
+
+        gsap.from(".square-anim", {
+            stagger: .2,
+            scale: 0.1,
+            duration: 1,
+            ease: Back.easeOut.config(1.7)
+        })
+
+        gsap.from(".transition2", {
+            scrollTrigger: {
+                trigger: '.transition2',
+                start: "top bottom"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .3
+        })
+
+        gsap.from(".transition3", {
+            scrollTrigger: {
+                trigger: ".transition3",
+                start: "top bottom"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .6
+        });
+
+        gsap.from(".transition4", {
+            scrollTrigger: {
+                trigger: ".transition4",
+                start: "top bottom"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .6
+        });
+    </script>
+</body>
 
 </html>
