@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$prime: #522020;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    a {
+        text-decoration: none;
+        color: $prime;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    h1 {
+        font-size: 2em;
+        color: $prime;
+    }
+
+    h6 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    header {
+        border-bottom: $prime solid 1px;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 0.5em 2em;
+
+        .logo a {
+            font-size: 3em;
+            font-family: "Corinthia";
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                margin: 0.3em;
+            }
+        }
+    }
+
+    main {
+        #head {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .name {
+                @include center();
+            }
+
+            .logo {
+                @include center();
+            }
+        }
+
+        #about {
+            @include center();
+
+            div {
+                text-align: center;
+                margin: 1em;
+                max-width: 25em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 32em) {
+    header {
+        justify-content: space-between;
+    }
+
+    main {
+        #head {
+            height: 84vh;
+
+            .name {
+                h1 {
+                    font-size: 4em;
+                }
+                p {
+                    font-size: 1.5em;
+                }
+            }
+
+            .logo {
+                img {
+                    width: 25em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 32em) {
+    header {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    main {
+        #head {
+            margin: 2em 1em;
+
+            .name {
+                h1 {
+                    font-size: 2.5em;
+                }
+                p {
+                    font-size: 1em;
+                }
+            }
+
+            .logo {
+                img {
+                    width: 15em;
+                }
+            }
+        }
+    }
+}

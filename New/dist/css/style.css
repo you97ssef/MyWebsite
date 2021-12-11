@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: #522020;
+}
+
+body li {
+  list-style: none;
+}
+
+body h1 {
+  font-size: 2em;
+  color: #522020;
+}
+
+body h6 {
+  font-size: 1.4em;
+}
+
+body p {
+  font-size: 1em;
+}
+
+body header {
+  border-bottom: #522020 solid 1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 2em;
+}
+
+body header .logo a {
+  font-size: 3em;
+  font-family: "Corinthia";
+}
+
+body header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header ul li {
+  margin: 0.3em;
+}
+
+body main #head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main #head .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #head .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #about div {
+  text-align: center;
+  margin: 1em;
+  max-width: 25em;
+}
+
+@media only screen and (min-width: 32em) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main #head {
+    height: 84vh;
+  }
+  main #head .name h1 {
+    font-size: 4em;
+  }
+  main #head .name p {
+    font-size: 1.5em;
+  }
+  main #head .logo img {
+    width: 25em;
+  }
+}
+
+@media only screen and (max-width: 32em) {
+  header {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main #head {
+    margin: 2em 1em;
+  }
+  main #head .name h1 {
+    font-size: 2.5em;
+  }
+  main #head .name p {
+    font-size: 1em;
+  }
+  main #head .logo img {
+    width: 15em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
