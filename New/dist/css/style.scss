@@ -39,6 +39,10 @@ body {
         font-size: 1em;
     }
 
+    img {
+        width: 20em;
+    }
+
     header {
         border-bottom: $prime solid 1px;
         position: sticky;
@@ -86,6 +90,19 @@ body {
                 max-width: 25em;
             }
         }
+
+        #knowledge {
+            margin: 4em 1em;
+
+            .backend, .frontend, .others {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+
+                margin: 5em 1em;
+            }
+        }
     }
 }
 
@@ -97,6 +114,7 @@ body {
     main {
         #head {
             height: 84vh;
+            min-height: 27em;
 
             .name {
                 h1 {
@@ -117,6 +135,10 @@ body {
 }
 
 @media only screen and (max-width: 32em) {
+    img {
+        width: 12em;
+    }
+
     header {
         justify-content: space-around;
         flex-wrap: wrap;

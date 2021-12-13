@@ -30,6 +30,10 @@ body p {
   font-size: 1em;
 }
 
+body img {
+  width: 20em;
+}
+
 body header {
   border-bottom: #522020 solid 1px;
   position: -webkit-sticky;
@@ -113,6 +117,25 @@ body main #about div {
   max-width: 25em;
 }
 
+body main #knowledge {
+  margin: 4em 1em;
+}
+
+body main #knowledge .backend, body main #knowledge .frontend, body main #knowledge .others {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5em 1em;
+}
+
 @media only screen and (min-width: 32em) {
   header {
     -webkit-box-pack: justify;
@@ -121,6 +144,7 @@ body main #about div {
   }
   main #head {
     height: 84vh;
+    min-height: 27em;
   }
   main #head .name h1 {
     font-size: 4em;
@@ -134,6 +158,9 @@ body main #about div {
 }
 
 @media only screen and (max-width: 32em) {
+  img {
+    width: 12em;
+  }
   header {
     -ms-flex-pack: distribute;
         justify-content: space-around;
