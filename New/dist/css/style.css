@@ -30,10 +30,6 @@ body p {
   font-size: 1em;
 }
 
-body img {
-  width: 20em;
-}
-
 body header {
   border-bottom: #522020 solid 1px;
   position: -webkit-sticky;
@@ -121,7 +117,9 @@ body main #knowledge {
   margin: 4em 1em;
 }
 
-body main #knowledge .backend, body main #knowledge .frontend, body main #knowledge .others {
+body main #knowledge .backend,
+body main #knowledge .frontend,
+body main #knowledge .others {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,7 +134,126 @@ body main #knowledge .backend, body main #knowledge .frontend, body main #knowle
   margin: 5em 1em;
 }
 
+body main #work {
+  text-align: center;
+  margin: 4em 1em;
+}
+
+body main #work button {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #522020;
+  border-color: #522020;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+}
+
+body main #work > button {
+  font-size: 1.3em;
+}
+
+body main #work > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #work > div div {
+  max-width: 20em;
+  margin: 2em;
+  border: #522020 0.2em solid;
+  border-radius: 1em;
+}
+
+body main #work > div div * {
+  margin: 1em;
+}
+
+body main #contact {
+  margin: 4em 1em;
+  text-align: center;
+}
+
+body main #contact button {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #522020;
+  border-color: #522020;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+}
+
+body main #contact div > button {
+  font-size: 1.3em;
+}
+
+body main #contact input {
+  width: 90%;
+  margin: 1em;
+}
+
+body main #contact textarea {
+  width: 90%;
+  margin: 1em;
+}
+
+body main #contact input,
+body main #contact textarea {
+  border: 0.2em solid;
+  border-radius: 0.25em;
+  color: #522020;
+  border-color: #522020;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+}
+
+body footer {
+  background-color: #522020;
+  text-align: center;
+  color: #fff;
+}
+
+body footer > div {
+  padding: 1em;
+}
+
+body footer > div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body footer > div ul li {
+  margin: 1em;
+}
+
 @media only screen and (min-width: 32em) {
+  img {
+    width: 20em;
+  }
   header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
