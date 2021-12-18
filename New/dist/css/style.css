@@ -6,72 +6,88 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-size: 1em;
 }
 
-body a {
+.input {
+  border: 0.2em solid #522020;
+  border-radius: 0.25em;
+  color: #522020;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  width: 90%;
+  margin: 1em;
+}
+
+.menu-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-inline li {
+  margin: 0.3em;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 0.5em;
+  color: #f4f4f4;
+  background-color: #522020;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+}
+
+a {
   text-decoration: none;
   color: #522020;
 }
 
-body li {
+li {
   list-style: none;
 }
 
-body h1 {
+h1 {
   font-size: 2em;
   color: #522020;
 }
 
-body h6 {
-  font-size: 1.4em;
-}
-
-body p {
-  font-size: 1em;
-}
-
-body header {
-  border-bottom: #522020 solid 1px;
+header {
+  border-bottom: #522020 solid 0.1em;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: #f4f4f4;
+  padding: 0.5em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5em 2em;
 }
 
-body header .logo a {
+header .logo a {
   font-size: 3em;
   font-family: "Corinthia";
 }
 
-body header ul {
+main #head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-body header ul li {
-  margin: 0.3em;
-}
-
-body main #head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-body main #head .name {
+main #head .name,
+main #head .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +99,7 @@ body main #head .name {
           align-items: center;
 }
 
-body main #head .logo {
+main #about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,69 +111,39 @@ body main #head .logo {
           align-items: center;
 }
 
-body main #about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main #about div {
+main #about div {
   text-align: center;
   margin: 1em;
   max-width: 25em;
 }
 
-body main #knowledge {
+main #knowledge {
   margin: 4em 1em;
 }
 
-body main #knowledge .backend,
-body main #knowledge .frontend,
-body main #knowledge .others {
+main #knowledge .backend,
+main #knowledge .frontend,
+main #knowledge .others {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 5em 1em;
 }
 
-body main #work {
+main #work {
   text-align: center;
   margin: 4em 1em;
 }
 
-body main #work button {
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  color: #fff;
-  background-color: #522020;
-  border-color: #522020;
-  cursor: pointer;
-  padding: 0.5em 1.2em;
-}
-
-body main #work > button {
-  font-size: 1.3em;
-}
-
-body main #work > div {
+main #work > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,83 +157,36 @@ body main #work > div {
       flex-wrap: wrap;
 }
 
-body main #work > div div {
+main #work > div div {
   max-width: 20em;
   margin: 2em;
   border: #522020 0.2em solid;
   border-radius: 1em;
 }
 
-body main #work > div div * {
+main #work > div div * {
   margin: 1em;
 }
 
-body main #contact {
+main #contact {
   margin: 4em 1em;
   text-align: center;
 }
 
-body main #contact button {
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  color: #fff;
-  background-color: #522020;
-  border-color: #522020;
-  cursor: pointer;
-  padding: 0.5em 1.2em;
-}
-
-body main #contact div > button {
-  font-size: 1.3em;
-}
-
-body main #contact input {
-  width: 90%;
-  margin: 1em;
-}
-
-body main #contact textarea {
-  width: 90%;
-  margin: 1em;
-}
-
-body main #contact input,
-body main #contact textarea {
-  border: 0.2em solid;
-  border-radius: 0.25em;
-  color: #522020;
-  border-color: #522020;
-  cursor: pointer;
-  padding: 0.5em 1.2em;
-}
-
-body footer {
+footer {
   background-color: #522020;
   text-align: center;
-  color: #fff;
+  color: #f4f4f4;
 }
 
-body footer > div {
+footer > div {
   padding: 1em;
 }
 
-body footer > div ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+footer > div ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-body footer > div ul li {
-  margin: 1em;
 }
 
 @media only screen and (min-width: 32em) {

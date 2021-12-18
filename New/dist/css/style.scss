@@ -1,206 +1,160 @@
+// Fonts
 @import url("https://fonts.googleapis.com/css2?family=Corinthia&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+// Colors
 $prime: #522020;
+$white: #f4f4f4;
 
-@mixin center {
+// Functions
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@mixin flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+// Style
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    font-size: 1em;
 }
 
-body {
-    a {
-        text-decoration: none;
-        color: $prime;
-    }
+.input {
+    border: 0.2em solid $prime;
+    border-radius: 0.25em;
+    color: $prime;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    width: 90%;
+    margin: 1em;
+}
+
+.menu-inline {
+    display: flex;
 
     li {
-        list-style: none;
+        margin: 0.3em;
+    }
+}
+
+button {
+    border: 1px solid;
+    border-radius: 0.5em;
+    color: $white;
+    background-color: $prime;
+    cursor: pointer;
+    padding: 0.5em 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: $prime;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2em;
+    color: $prime;
+}
+
+header {
+    border-bottom: $prime solid 0.1em;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    padding: 0.5em 2em;
+
+    @include flex-center();
+
+    .logo a {
+        font-size: 3em;
+        font-family: "Corinthia";
+    }
+}
+
+main {
+    #head {
+        @include flex-evenly();
+
+        .name,
+        .logo {
+            @include flex-center();
+        }
     }
 
-    h1 {
-        font-size: 2em;
-        color: $prime;
-    }
+    #about {
+        @include flex-center();
 
-    h6 {
-        font-size: 1.4em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    header {
-        border-bottom: $prime solid 1px;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        padding: 0.5em 2em;
-
-        .logo a {
-            font-size: 3em;
-            font-family: "Corinthia";
-        }
-
-        ul {
-            display: flex;
-
-            li {
-                margin: 0.3em;
-            }
-        }
-    }
-
-    main {
-        #head {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-
-            .name {
-                @include center();
-            }
-
-            .logo {
-                @include center();
-            }
-        }
-
-        #about {
-            @include center();
-
-            div {
-                text-align: center;
-                margin: 1em;
-                max-width: 25em;
-            }
-        }
-
-        #knowledge {
-            margin: 4em 1em;
-
-            .backend,
-            .frontend,
-            .others {
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                flex-wrap: wrap;
-
-                margin: 5em 1em;
-            }
-        }
-
-        #work {
+        div {
             text-align: center;
-            margin: 4em 1em;
-
-            button {
-                border: 1px solid transparent;
-                border-radius: 0.25rem;
-                transition: color 0.15s ease-in-out,
-                    background-color 0.15s ease-in-out,
-                    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-                color: #fff;
-                background-color: $prime;
-                border-color: $prime;
-                cursor: pointer;
-                padding: 0.5em 1.2em;
-            }
-
-            > button {
-                font-size: 1.3em;
-            }
-
-            > div {
-                @include center();
-                flex-wrap: wrap;
-
-                div {
-                    max-width: 20em;
-                    margin: 2em;
-
-                    border: $prime 0.2em solid;
-                    border-radius: 1em;
-
-                    * {
-                        margin: 1em;
-                    }
-                }
-            }
-        }
-
-        #contact {
-            margin: 4em 1em;
-            text-align: center;
-
-            button {
-                border: 1px solid transparent;
-                border-radius: 0.25rem;
-                transition: color 0.15s ease-in-out,
-                    background-color 0.15s ease-in-out,
-                    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-                color: #fff;
-                background-color: $prime;
-                border-color: $prime;
-                cursor: pointer;
-                padding: 0.5em 1.2em;
-            }
-
-            div > button {
-                font-size: 1.3em;
-            }
-
-            input {
-                width: 90%;
-                margin: 1em;
-            }
-
-            textarea {
-                width: 90%;
-                margin: 1em;
-            }
-
-            input,
-            textarea {
-                border: 0.2em solid;
-                border-radius: 0.25em;
-                color: $prime;
-                border-color: $prime;
-                cursor: pointer;
-                padding: 0.5em 1.2em;
-            }
+            margin: 1em;
+            max-width: 25em;
         }
     }
 
-    footer {
-        background-color: $prime;
+    #knowledge {
+        margin: 4em 1em;
+
+        .backend,
+        .frontend,
+        .others {
+            @include flex-evenly();
+            align-items: center;
+
+            margin: 5em 1em;
+        }
+    }
+
+    #work {
         text-align: center;
-        color: #fff;
+        margin: 4em 1em;
 
         > div {
-            padding: 1em;
+            @include flex-center();
+            flex-wrap: wrap;
 
-            ul {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
+            div {
+                max-width: 20em;
+                margin: 2em;
 
-                li {
+                border: $prime 0.2em solid;
+                border-radius: 1em;
+
+                * {
                     margin: 1em;
                 }
             }
+        }
+    }
+
+    #contact {
+        margin: 4em 1em;
+        text-align: center;
+    }
+}
+
+footer {
+    background-color: $prime;
+    text-align: center;
+    color: $white;
+
+    > div {
+        padding: 1em;
+
+        ul {
+            justify-content: center;
         }
     }
 }
