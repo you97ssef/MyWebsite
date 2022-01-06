@@ -47,7 +47,9 @@ $white: #f4f4f4;
     }
 }
 
-button {
+button,
+.btn {
+    text-decoration: none !important;
     border: 1px solid;
     border-radius: 0.5em;
     color: $white;
@@ -127,7 +129,7 @@ main {
             @include flex-center();
             flex-wrap: wrap;
 
-            div {
+            > div {
                 background-color: #fff;
                 max-width: 20em;
                 margin: 2em;
@@ -138,6 +140,16 @@ main {
                 * {
                     margin: 1em;
                 }
+
+                div {
+                    margin: 2em;
+                }
+            }
+
+            a {
+                text-decoration: underline;
+                margin: 0;
+                font-weight: bold;
             }
         }
     }
