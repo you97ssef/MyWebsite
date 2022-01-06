@@ -156,16 +156,16 @@
         </section>
         <section id="contact">
             <h1>Contact me</h1>
-            <form method="POST" netlify>
+            <form name="contact" method="POST" data-netlify="true">
                 <div>
-                    <input class="input" type="text" placeholder="Your name...">
-                    <input class="input" type="text" placeholder="Your email...">
+                    <input class="input" name="name" type="text" placeholder="Your name...">
+                    <input class="input" name="email" type="text" placeholder="Your email...">
                 </div>
                 <div>
-                    <textarea class="input" rows="5" placeholder="Your message..."></textarea>
+                    <textarea class="input" name="message" rows="5" placeholder="Your message..."></textarea>
                 </div>
                 <div>
-                    <button>Send Message</button>
+                    <button type="submit">Send Message</button>
                 </div>
             </form>
         </section>
