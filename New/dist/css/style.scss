@@ -4,6 +4,7 @@
 
 // Colors
 $prime: #522020;
+$prime-tr: #52202015;
 $white: #f4f4f4;
 
 // Functions
@@ -53,6 +54,7 @@ button {
     background-color: $prime;
     cursor: pointer;
     padding: 0.5em 1.2em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 a {
@@ -73,7 +75,7 @@ header {
     border-bottom: $prime solid 0.1em;
     position: sticky;
     top: 0;
-    background-color: $white;
+    background-color: #fff;
     padding: 0.5em 2em;
 
     @include flex-center();
@@ -100,7 +102,7 @@ main {
         div {
             text-align: center;
             margin: 1em;
-            max-width: 25em;
+            max-width: 32em;
         }
     }
 
@@ -126,6 +128,7 @@ main {
             flex-wrap: wrap;
 
             div {
+                background-color: #fff;
                 max-width: 20em;
                 margin: 2em;
 
@@ -149,12 +152,15 @@ footer {
     background-color: $prime;
     text-align: center;
     color: $white;
+    padding: 2em 1em;
 
     > div {
-        padding: 1em;
-
         ul {
             justify-content: center;
+
+            img {
+                width: 2.3em;
+            }
         }
     }
 }
@@ -220,5 +226,31 @@ footer {
                 }
             }
         }
+    }
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, $prime-tr 50%, $white 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
     }
 }
