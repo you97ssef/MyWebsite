@@ -159,6 +159,39 @@ main {
         }
     }
 
+    #experience {
+        text-align: center;
+        margin: 4em 1em;
+
+        > div {
+            @include flex-center();
+            flex-wrap: wrap;
+
+            > div {
+                background-color: #fff;
+                max-width: 20em;
+                margin: 2em;
+
+                border: $prime 0.2em dashed;
+                border-radius: 1em;
+
+                * {
+                    margin: 1em;
+                }
+
+                div {
+                    margin: 2em;
+                }
+            }
+
+            a {
+                text-decoration: underline;
+                margin: 0;
+                font-weight: bold;
+            }
+        }
+    }
+
     #contact {
         margin: 4em 1em;
         text-align: center;

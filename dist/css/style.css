@@ -132,6 +132,34 @@ main #work > div a {
   margin: 0;
   font-weight: bold;
 }
+main #experience {
+  text-align: center;
+  margin: 4em 1em;
+}
+main #experience > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main #experience > div > div {
+  background-color: #fff;
+  max-width: 20em;
+  margin: 2em;
+  border: #522020 0.2em dashed;
+  border-radius: 1em;
+}
+main #experience > div > div * {
+  margin: 1em;
+}
+main #experience > div > div div {
+  margin: 2em;
+}
+main #experience > div a {
+  text-decoration: underline;
+  margin: 0;
+  font-weight: bold;
+}
 main #contact {
   margin: 4em 1em;
   text-align: center;
